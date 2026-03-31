@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>건강정보 & 새소식 | 더탑재활의학과의원</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1a2744;--teal:#2d7d7d;--teal-light:#3a9999;--cream:#f8f6f2;--text:#1e2a3a;--text-mid:#4a5568;--text-light:#8a9ab0;--border:#e2e8f0;--accent:#c9a96e}
+    body{font-family:'Noto Sans KR',sans-serif;background:#fdfcfa;color:var(--text);font-weight:300;line-height:1.7}
+
+    nav{position:sticky;top:0;background:rgba(253,252,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;flex-direction:column;line-height:1.25;text-decoration:none;gap:1px}
+    .nav-logo .logo-ko-main{font-family:'Noto Serif KR',serif;font-size:.95rem;font-weight:500;color:var(--navy)}
+    .nav-logo .logo-sub{font-size:.6rem;color:var(--text-light);letter-spacing:.1em;display:flex;align-items:center;gap:6px}
+    .nav-logo .logo-sub::before{content:'';display:inline-block;width:14px;height:1px;background:var(--teal);flex-shrink:0}
+    .nav-reserve{background:var(--teal);color:white;text-decoration:none;padding:9px 18px;border-radius:2px;font-size:.78rem;letter-spacing:.04em;transition:background .2s}
+    .nav-reserve:hover{background:var(--teal-light)}
+
+    .page-header{background:var(--navy);padding:72px 0 56px;position:relative;overflow:hidden}
+    .page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(45,125,125,.18),transparent 70%);opacity:.6}
+    .page-header-inner{max-width:1100px;margin:0 auto;padding:0 32px;position:relative;z-index:1}
+    .page-header .label{font-size:.68rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .page-header .label::before{content:'';display:block;width:24px;height:1px;background:var(--accent)}
+    .page-header h1{font-family:'Noto Serif KR',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:white;font-weight:400}
+
+    .filter-bar{background:white;border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:90}
+    .filter-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;gap:8px;overflow-x:auto;padding-top:14px;padding-bottom:14px}
+    .filter-btn{border:1px solid var(--border);background:white;color:var(--text-mid);padding:6px 16px;border-radius:20px;font-size:.78rem;cursor:pointer;white-space:nowrap;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+    .filter-btn.active,.filter-btn:hover{background:var(--navy);color:white;border-color:var(--navy)}
+
+    .blog-wrap{max-width:1100px;margin:0 auto;padding:56px 32px 100px}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .blog-card{background:white;border-radius:3px;overflow:hidden;transition:box-shadow .3s,transform .3s;text-decoration:none;color:inherit;display:block;border:1px solid var(--border)}
+    .blog-card:hover{box-shadow:0 8px 40px rgba(0,0,0,.08);transform:translateY(-4px)}
+    .blog-card-img{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .blog-tag{position:absolute;top:12px;left:12px;background:var(--teal);color:white;font-size:.62rem;letter-spacing:.08em;padding:3px 8px;border-radius:1px}
+    .blog-card-body{padding:22px}
+    .blog-card-date{font-size:.71rem;color:var(--text-light);letter-spacing:.05em;margin-bottom:8px}
+    .blog-card h3{font-family:'Noto Serif KR',serif;font-size:.95rem;font-weight:500;color:var(--navy);line-height:1.6;margin-bottom:8px}
+    .blog-card p{font-size:.8rem;color:var(--text-mid);line-height:1.75}
+    .empty{text-align:center;padding:80px;color:var(--text-light);font-size:.88rem;grid-column:1/-1}
+
+    footer{background:var(--navy);color:rgba(255,255,255,.5);padding:36px 0;margin-top:0}
+    .footer-inner{max-width:1100px;margin:0 auto;padding:0 32px;font-size:.75rem;text-align:center;line-height:2}
+    .footer-inner a{color:rgba(255,255,255,.3);text-decoration:none}
+
+    @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr}.nav-reserve{display:none}.blog-wrap,.filter-inner,.page-header-inner,.nav-inner{padding-left:20px;padding-right:20px}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="logo-ko-main">더탑재활의학과의원</span>
+      <span class="logo-sub">The Top Rehabilitation Clinic</span>
+    </a>
+    <a href="https://booking.naver.com/booking/13/bizes/1147243" target="_blank" class="nav-reserve">네이버 예약</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="label"><span>의학정보 · 공지</span></div>
+    <h1>건강정보 &amp; 새소식</h1>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-cat="전체">전체</button>
+    <button class="filter-btn" data-cat="의학정보">의학정보</button>
+    <button class="filter-btn" data-cat="재활정보">재활정보</button>
+    <button class="filter-btn" data-cat="공지">공지</button>
+  </div>
+</div>
+
+<div class="blog-wrap">
+  <div class="blog-grid" id="blog-grid">
+    <div class="empty">글을 불러오는 중...</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    더탑재활의학과의원 &nbsp;|&nbsp; 서울특별시 강남구 논현로 98, 문화빌딩 3층 &nbsp;|&nbsp; Tel: 02-6952-3355<br>
+    <a href="/">← 홈으로 돌아가기</a>
+  </div>
+</footer>
+
+<script>
+  const catColors = {
+    '의학정보': 'linear-gradient(135deg,#1a2744,#2d5a7d)',
+    '공지':    'linear-gradient(135deg,#1e3a2f,#2d7d5a)',
+    '재활정보': 'linear-gradient(135deg,#2a1e3a,#5a2d7d)'
+  };
+  const catIcons = {
+    '의학정보': '<path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+    '공지':    '<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+    '재활정보': '<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>'
+  };
+
+  function formatDate(d) {
+    const [y,m,day] = d.split('-');
+    return y + '. ' + m + '. ' + day;
+  }
+
+  function renderPosts(posts) {
+    const grid = document.getElementById('blog-grid');
+    if (posts.length === 0) {
+      grid.innerHTML = '<div class="empty">해당 카테고리의 글이 없습니다.</div>';
+      return;
+    }
+    grid.innerHTML = posts.map(p => {
+      const color = catColors[p.category] || catColors['의학정보'];
+      const icon  = catIcons[p.category]  || catIcons['의학정보'];
+      return `<a href="${p.file}" class="blog-card">
+        <div class="blog-card-img" style="background:${color}">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".8">${icon}</svg>
+          <span class="blog-tag">${p.category}</span>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-date">${formatDate(p.date)}</p>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt || ''}</p>
+        </div>
+      </a>`;
+    }).join('');
+  }
+
+  let allPosts = [];
+  let currentCat = '전체';
+
+  fetch('posts.json')
+    .then(r => r.json())
+    .then(posts => {
+      allPosts = posts.filter(p => p.published !== false)
+                      .sort((a,b) => b.date.localeCompare(a.date));
+      renderPosts(allPosts);
+    })
+    .catch(() => {
+      document.getElementById('blog-grid').innerHTML =
+        '<div class="empty">글을 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.</div>';
+    });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCat = btn.dataset.cat;
+      const filtered = currentCat === '전체'
+        ? allPosts
+        : allPosts.filter(p => p.category === currentCat);
+      renderPosts(filtered);
+    });
+  });
+</script>
+</body>
+</html>
