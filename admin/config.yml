@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: areyouk-source/thetop-rehab
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: ko
+
+collections:
+  # ── 블로그 / 건강정보 ──
+  - name: "posts"
+    label: "블로그 · 건강정보"
+    label_singular: "글"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    fields:
+      - label: "제목"
+        name: "title"
+        widget: "string"
+      - label: "날짜"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "카테고리"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "의학정보", value: "의학정보" }
+          - { label: "재활정보", value: "재활정보" }
+          - { label: "공지", value: "공지" }
+        default: "의학정보"
+      - label: "요약 (목록에 표시)"
+        name: "excerpt"
+        widget: "string"
+        required: false
+      - label: "본문"
+        name: "body"
+        widget: "markdown"
+      - label: "공개"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ── 팝업 공지 ──
+  - name: "settings"
+    label: "팝업 · 공지 설정"
+    files:
+      - label: "팝업 공지"
+        name: "popup"
+        file: "_data/popup.json"
+        fields:
+          - label: "팝업 활성화"
+            name: "active"
+            widget: "boolean"
+            default: true
+          - label: "팝업 제목"
+            name: "title"
+            widget: "string"
+            default: "진료 안내"
+          - label: "팝업 내용"
+            name: "body"
+            widget: "text"
+          - label: "배지 텍스트"
+            name: "badge"
+            widget: "string"
+            default: "공지"
