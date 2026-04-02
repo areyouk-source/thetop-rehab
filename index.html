@@ -952,7 +952,7 @@
     return y + '. ' + m + '. ' + day;
   }
 
-  (function renderBlog() {
+  document.addEventListener('DOMContentLoaded', function renderBlog() {
     const grid = document.getElementById('blog-grid');
     const recent = POSTS.slice(0, 3);
     if (recent.length === 0) {
@@ -974,7 +974,7 @@
         + '</div></a>';
     }).join('');
     grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  })();
+  });
 </script>
 </body>
 </html>

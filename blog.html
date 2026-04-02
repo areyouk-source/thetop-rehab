@@ -191,20 +191,22 @@
     }).join('');
   }
 
-  let allPosts = POSTS.filter(p => p.published !== false)
-                      .sort((a,b) => b.date.localeCompare(a.date));
-  let currentCat = '전체';
-  renderPosts(allPosts);
+  document.addEventListener('DOMContentLoaded', function() {
+    let allPosts = POSTS.filter(p => p.published !== false)
+                        .sort((a,b) => b.date.localeCompare(a.date));
+    let currentCat = '전체';
+    renderPosts(allPosts);
 
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCat = btn.dataset.cat;
-      const filtered = currentCat === '전체'
-        ? allPosts
-        : allPosts.filter(p => p.category === currentCat);
-      renderPosts(filtered);
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        const filtered = currentCat === '전체'
+          ? allPosts
+          : allPosts.filter(p => p.category === currentCat);
+        renderPosts(filtered);
+      });
     });
   });
 </script>
