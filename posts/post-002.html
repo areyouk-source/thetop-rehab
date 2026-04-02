@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>손목·엄지 통증의 원인, 드퀘르벵병 | 더탑재활의학과의원</title>
+  <meta name="description" content="손목과 엄지손가락 통증의 원인인 드퀘르벵병의 증상, 진단, 치료법을 더탑재활의학과 전현규 원장이 설명합니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1a2744;--teal:#2d7d7d;--teal-light:#3a9999;--cream:#f8f6f2;--text:#1e2a3a;--text-mid:#4a5568;--text-light:#8a9ab0;--border:#e2e8f0;--accent:#c9a96e}
+    body{font-family:'Noto Sans KR',sans-serif;background:#fdfcfa;color:var(--text);font-weight:300;line-height:1.7}
+
+    nav{position:sticky;top:0;background:rgba(253,252,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100}
+    .nav-inner{max-width:800px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{text-decoration:none;font-family:'Noto Serif KR',serif;font-size:.95rem;color:var(--navy);font-weight:500}
+    .nav-back{text-decoration:none;font-size:.8rem;color:var(--teal);display:flex;align-items:center;gap:6px;transition:gap .2s}
+    .nav-back:hover{gap:10px}
+
+    .post-wrap{max-width:760px;margin:0 auto;padding:56px 24px 100px}
+
+    /* 헤더 */
+    .post-meta{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+    .post-cat{background:var(--teal);color:white;font-size:.65rem;padding:3px 10px;border-radius:2px;letter-spacing:.08em}
+    .post-sub-cat{background:var(--cream);border:1px solid var(--border);color:var(--text-mid);font-size:.65rem;padding:3px 10px;border-radius:2px;letter-spacing:.04em}
+    .post-date{font-size:.78rem;color:var(--text-light)}
+    .post-title{font-family:'Noto Serif KR',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:500;color:var(--navy);line-height:1.45;margin-bottom:10px}
+    .post-subtitle{font-size:.95rem;color:var(--text-mid);margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+
+    /* 본문 */
+    .post-body{font-size:.91rem;color:var(--text-mid);line-height:1.95}
+    .post-body h2{font-family:'Noto Serif KR',serif;font-size:1.15rem;font-weight:500;color:var(--navy);margin:44px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .post-body h3{font-size:.95rem;font-weight:500;color:var(--navy);margin:28px 0 10px}
+    .post-body p{margin-bottom:16px}
+    .post-body strong{color:var(--navy);font-weight:500}
+
+    /* 박스 */
+    .highlight{background:var(--cream);border-left:3px solid var(--teal);padding:18px 22px;border-radius:0 3px 3px 0;margin:20px 0}
+    .highlight p{margin-bottom:8px}
+    .highlight p:last-child{margin-bottom:0}
+    .warn-box{background:#fff8f0;border-left:3px solid var(--accent);padding:16px 22px;border-radius:0 3px 3px 0;margin:20px 0;font-size:.85rem;color:#7a5a2a}
+
+    /* 태그 목록 */
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+    .tag{background:white;border:1px solid var(--border);color:var(--text-mid);font-size:.76rem;padding:5px 12px;border-radius:20px}
+
+    /* 위험군 / 증상 그리드 */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .info-card{background:white;border:1px solid var(--border);border-radius:3px;padding:20px}
+    .info-card h4{font-size:.78rem;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .info-card h4::after{content:'';flex:1;height:1px;background:var(--border)}
+    .info-card ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .info-card ul li{font-size:.84rem;color:var(--text-mid);padding-left:14px;position:relative;line-height:1.65}
+    .info-card ul li::before{content:'·';position:absolute;left:0;color:var(--teal);font-weight:700}
+
+    /* 치료 단계 */
+    .treatment-steps{display:flex;flex-direction:column;gap:12px;margin:20px 0}
+    .step{display:flex;gap:16px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:3px;padding:16px 20px}
+    .step-num{width:28px;height:28px;flex-shrink:0;background:var(--navy);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:500;margin-top:1px}
+    .step-body h4{font-size:.88rem;font-weight:500;color:var(--navy);margin-bottom:4px}
+    .step-body p{font-size:.82rem;color:var(--text-mid);line-height:1.75;margin:0}
+
+    /* 운동 요법 */
+    .exercise-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+    .exercise-card{background:white;border:1px solid var(--border);border-radius:3px;padding:16px}
+    .exercise-card .ex-num{font-size:.65rem;letter-spacing:.1em;color:var(--teal);font-weight:500;margin-bottom:6px}
+    .exercise-card p{font-size:.82rem;color:var(--text-mid);line-height:1.7;margin:0}
+
+    /* 마무리 */
+    .closing{background:var(--navy);color:white;padding:28px 28px;border-radius:3px;margin-top:48px;font-size:.88rem;line-height:1.9}
+    .closing strong{color:var(--accent)}
+    .disclaimer{margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.8}
+
+    .back-btn{display:inline-flex;align-items:center;gap:8px;margin-top:48px;padding:12px 24px;border:1px solid var(--border);border-radius:2px;text-decoration:none;color:var(--text-mid);font-size:.84rem;transition:border-color .2s,color .2s}
+    .back-btn:hover{border-color:var(--teal);color:var(--teal)}
+
+    /* CTA */
+    .cta-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--cream);border:1px solid var(--border);border-radius:3px;padding:20px 24px;margin-top:40px;flex-wrap:wrap}
+    .cta-bar p{font-size:.86rem;color:var(--text-mid)}
+    .cta-bar strong{display:block;font-size:1rem;color:var(--navy);margin-bottom:2px}
+    .cta-btn{background:var(--teal);color:white;text-decoration:none;padding:11px 22px;border-radius:2px;font-size:.82rem;white-space:nowrap;transition:background .2s}
+    .cta-btn:hover{background:var(--teal-light)}
+
+    @media(max-width:600px){
+      .two-col,.exercise-grid{grid-template-columns:1fr}
+      .cta-bar{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">더탑재활의학과의원</a>
+    <a href="../blog.html" class="nav-back">← 목록으로</a>
+  </div>
+</nav>
+
+<div class="post-wrap">
+
+  <!-- 헤더 -->
+  <div class="post-meta">
+    <span class="post-cat">의학정보</span>
+    <span class="post-sub-cat">팔꿈치 · 손 통증</span>
+    <span class="post-date">2020. 08. 11</span>
+  </div>
+  <h1 class="post-title">손목·엄지 통증의 원인<br>드퀘르벵병이란?</h1>
+  <p class="post-subtitle">De Quervain's Disease — 진단과 치료, 재활 운동까지</p>
+
+  <div class="post-body">
+
+    <p>안녕하세요, 더탑재활의학과 원장 전현규입니다.<br>
+    오늘은 손목 통증, 특히 <strong>엄지손가락 쪽 통증</strong>을 호소하시는 분들께 흔히 발생하는 <strong>드퀘르벵병</strong>에 대해 설명드립니다.</p>
+
+    <!-- 1. 질환 정의 -->
+    <h2>드퀘르벵병이란?</h2>
+    <p>드퀘르벵병은 스위스 의사 드퀘르벵(De Quervain)의 이름에서 유래한 질환으로, 우리말로는 <strong>요골붓돌기힘줄윤활막염</strong> 또는 <strong>손목건초염</strong>이라고 합니다.</p>
+    <p>손목에는 손가락과 손목을 움직이는 여러 힘줄이 지나갑니다. 손등 쪽으로 엄지부터 새끼손가락 방향으로 여섯 개의 터널이 있는데, 그 중 <strong>첫 번째 터널</strong>에는 엄지를 움직이는 두 힘줄이 함께 지나갑니다.</p>
+
+    <figure style="margin:24px 0;border:1px solid var(--border);border-radius:4px;overflow:hidden;background:white">
+      <img src="../images/dequervain-anatomy.svg" alt="드퀘르벵병 손목 터널 해부도" style="width:100%;display:block">
+      <figcaption style="padding:10px 16px;font-size:.78rem;color:var(--text-light);background:var(--cream);text-align:center">
+        손목 1번 터널 위치 — APL·EPB 힘줄이 지나는 구간에서 염증 발생
+      </figcaption>
+    </figure>
+
+    <div class="highlight">
+      <p><strong>첫 번째 터널을 지나는 힘줄</strong></p>
+      <p>· 장무지외전건 (APL) — 엄지를 바깥으로 벌리는 힘줄<br>
+         · 단무지신건 (EPB) — 엄지를 위로 펴는 힘줄</p>
+      <p style="margin-top:10px">이 터널 안에서 힘줄이 반복적으로 마찰되어 <strong>염증과 부종</strong>이 생기면, 손가락을 움직일 때마다 극심한 통증이 발생합니다.</p>
+    </div>
+
+    <!-- 2. 원인과 위험군 -->
+    <h2>원인 및 위험군</h2>
+    <p>엄지손가락을 움직이는 힘줄의 <strong>반복적인 과사용</strong>이 주된 원인입니다.</p>
+
+    <div class="two-col">
+      <div class="info-card">
+        <h4>위험 직업 · 활동</h4>
+        <ul>
+          <li>손목·손가락 사용이 많은 직업<br><span style="font-size:.75rem;color:var(--text-light)">(요리, 운전, 미용 등)</span></li>
+          <li>라켓 스포츠, 골프, 볼링</li>
+          <li>컴퓨터·스마트폰 장시간 사용</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>주요 증상</h4>
+        <ul>
+          <li>엄지·손목 움직임 시 통증</li>
+          <li>엄지 쪽 저린감·부종</li>
+          <li>손목 열감·압통</li>
+          <li>30~60대 중년 여성에 빈번<br><span style="font-size:.75rem;color:var(--text-light)">(임산부·수유기 여성 포함)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. 진단 -->
+    <h2>진단 방법</h2>
+
+    <h3>① 핀켈스타인 검사 (Finkelstein Test)</h3>
+    <p>엄지손가락을 나머지 네 손가락으로 감싸 쥔 뒤, 손목을 아래쪽(새끼손가락 방향)으로 꺾었을 때 손목 부위에 심한 통증이 유발되면 드퀘르벵을 의심합니다.</p>
+
+    <div class="warn-box">
+      ⚠️ 핀켈스타인 검사는 다른 질환에서도 양성이 나올 수 있습니다. 반드시 다른 질환과의 감별 진단이 필요합니다.
+    </div>
+
+    <h3>② 초음파 검사</h3>
+    <p>초음파로 첫 번째 터널 주변의 <strong>힘줄 염증과 부종</strong>을 직접 확인하여 확진합니다. 더탑재활의학과에서는 삼성메디슨 RS80A 초음파 장비로 정밀하게 진단합니다.</p>
+
+    <!-- 4. 치료 -->
+    <h2>치료 방법</h2>
+
+    <div class="treatment-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>소염 진통제 복용 + 과사용 줄이기</h4>
+          <p>염증 초기에 약물로 통증을 조절하고, 엄지·손목의 반복 사용을 최대한 줄입니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>엄지·손목 고정 (부목)</h4>
+          <p>엄지와 손목을 고정하는 부목(splint)으로 힘줄의 추가 자극을 차단합니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>주사 치료 (소염 주사)</h4>
+          <p>초음파 유도하에 정확한 위치에 소염제를 주사하여 빠른 통증 완화를 유도합니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>체외충격파 · 고출력 레이저</h4>
+          <p>도니어 체외충격파(ESWT)와 힐트레이저로 염증 조직의 회복을 촉진합니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>운동 요법 · 도수 치료</h4>
+          <p>급성 통증이 호전된 뒤 재발 방지를 위해 힘줄 강화, 정상 가동 범위 회복, 과긴장 근육 이완을 단계적으로 진행합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 재활 운동 -->
+    <h2>재활 운동 (통증이 호전된 후 시행)</h2>
+
+    <div class="warn-box">
+      ⚠️ 아래 운동은 급성 통증이 <strong>어느 정도 가라앉은 후</strong>에 시작하세요. 통증이 심할 때는 절대 하지 마세요.<br>
+      한 번에 5~10회, 하루 2~3회 반복합니다.
+    </div>
+
+    <h3>1단계 — 보조 스트레칭</h3>
+    <div class="exercise-grid">
+      <div class="exercise-card">
+        <div class="ex-num">동작 1</div>
+        <p>손바닥을 바닥에 붙이고, <strong>반대 손으로</strong> 엄지를 옆으로 벌려줍니다.<br>5초 유지 후 복귀. 통증 없는 범위에서만 시행.</p>
+      </div>
+      <div class="exercise-card">
+        <div class="ex-num">동작 2</div>
+        <p>손을 옆으로 세운 뒤, 동작 1과 같은 방법으로 시행합니다.</p>
+      </div>
+    </div>
+
+    <h3>2단계 — 능동 강화 운동</h3>
+    <p style="font-size:.83rem;color:var(--text-light);margin-bottom:12px">1단계 동작을 반대 손 없이 혼자 할 수 있을 때 시작합니다.</p>
+    <div class="exercise-grid">
+      <div class="exercise-card">
+        <div class="ex-num">동작 3</div>
+        <p>테이블에 손목을 올려놓고 힘줄이 당겨지는 느낌으로 엄지를 <strong>서서히 아래로</strong> 내립니다. 올릴 때는 반대 손으로 보조.</p>
+      </div>
+      <div class="exercise-card">
+        <div class="ex-num">동작 4</div>
+        <p><strong>탄성 밴드</strong>를 사용해 엄지를 벌린 자세를 5초 유지 후 복귀.</p>
+      </div>
+    </div>
+
+    <!-- 마무리 -->
+    <div class="closing">
+      <p>드퀘르벵병은 초기에 적절히 치료하지 않으면 <strong>만성화</strong>되거나 수술이 필요한 상태로 진행될 수 있습니다.</p>
+      <p style="margin-top:10px">손목 통증이 지속된다면 지체하지 말고 내원하여 정확한 진단을 받으시기 바랍니다.</p>
+      <p class="disclaimer">※ 본 내용은 일반적인 의학 정보를 제공하며 개인적인 소견이 포함되어 있습니다. 실제 진단 및 치료는 담당 의사와 상담하시기 바랍니다.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-bar">
+      <div>
+        <strong>더탑재활의학과의원</strong>
+        <p>서울 강남구 논현로 98, 문화빌딩 3층 &nbsp;|&nbsp; 02-6952-3355</p>
+      </div>
+      <a href="https://m.booking.naver.com/booking/13/bizes/346588" target="_blank" class="cta-btn">네이버 예약</a>
+    </div>
+
+  </div>
+
+  <a href="../blog.html" class="back-btn">← 목록으로 돌아가기</a>
+
+</div>
+</body>
+</html>

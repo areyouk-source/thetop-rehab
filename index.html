@@ -364,13 +364,13 @@
         <span class="service-num">03</span>
         <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="12" y="10" width="24" height="28" rx="2"/><path d="M18 20h12M18 26h8"/></svg>
         <h3>주사 치료</h3>
-        <p>관절강내 주사, 신경차단술, 체외충격파, 프롤로 DNA 주사 등 다양한 시술로 통증을 완화합니다.</p>
+        <p>관절강내 주사, 신경차단술, 체외충격파, 프롤로 치료 등 다양한 시술로 통증을 완화합니다.</p>
       </div>
       <div class="service-card reveal">
         <span class="service-num">04</span>
         <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 36l8-12 6 8 4-6 6 10"/><circle cx="24" cy="16" r="5"/></svg>
         <h3>스포츠 손상</h3>
-        <p>스포츠 활동 중 발생한 인대·건·연골 손상의 진단과 치료를 전문으로 합니다.</p>
+        <p>스포츠 활동 중 발생한 인대·건·연골 손상의 진단과 재활 치료를 전문으로 합니다.</p>
       </div>
       <div class="service-card reveal">
         <span class="service-num">05</span>
@@ -397,7 +397,6 @@
     </div>
     <div class="doctor-grid">
       <div class="doctor-photo reveal">
-        <!-- 원장님 사진: doctor.jpg 파일을 같은 폴더에 넣고 아래 주석을 해제하세요 -->
         <img src="images/doctor.webp" alt="전현규 원장">
         <div class="doctor-photo-label">
           <h3>전현규 원장</h3>
@@ -452,7 +451,7 @@
     <div class="reveal">
       <div class="section-label"><span>장비 안내</span></div>
       <h2 class="section-title">최신 의료 장비로<br>더 정확하게 치료합니다</h2>
-      <p class="section-desc">독일 도니어 체외충격파와 힐트레이저를 동시 도입. 보다 효과적인 치료를 제공합니다.</p>
+      <p class="section-desc">강남·서초 최초 도니어 체외충격파와 힐트레이저를 동시 도입. 보다 효과적인 치료를 제공합니다.</p>
     </div>
     <div class="equip-grid">
       <div class="equip-card reveal">
@@ -700,8 +699,8 @@
             <td class="price">60,000 – 180,000</td>
           </tr>
           <tr>
-            <td class="item">체외충격파치료(ESWT) – 타수별 상이</td>
-            <td class="price">40,000 – 160,000</td>
+            <td class="item">체외충격파치료(ESWT) – 티수별 상이</td>
+            <td class="price">40,000 – 120,000</td>
           </tr>
           <tr>
             <td class="item">신장분사치료 – 시간별 상이</td>
@@ -710,7 +709,7 @@
           <!-- 주사 -->
           <tr>
             <td class="cat" rowspan="2">주사</td>
-            <td class="item">인대증식치료(프롤로 주사) – 부위별 상이</td>
+            <td class="item">인대증식치료(프롤로 주사) – 부위별</td>
             <td class="price">30,000 – 100,000</td>
           </tr>
           <tr>
@@ -720,7 +719,7 @@
           <!-- 제증명 -->
           <tr>
             <td class="cat" rowspan="4">제증명</td>
-            <td class="item">진료(통원)확인서</td>
+            <td class="item">진료확인서</td>
             <td class="price">2,000</td>
           </tr>
           <tr>
@@ -731,7 +730,10 @@
             <td class="item">진료의뢰서</td>
             <td class="price">–</td>
           </tr>
-
+          <tr>
+            <td class="item">통원확인서</td>
+            <td class="price">2,000</td>
+          </tr>
           <!-- 진단 및 소견서 -->
           <tr>
             <td class="cat" rowspan="11">진단 및<br>소견서</td>
@@ -741,6 +743,26 @@
           <tr>
             <td class="item">상해진단서 (3주 이상)</td>
             <td class="price">150,000</td>
+          </tr>
+          <tr>
+            <td class="item">장애진단서 (신체적장애/동사무소)</td>
+            <td class="price">15,000</td>
+          </tr>
+          <tr>
+            <td class="item">병무용진단서</td>
+            <td class="price">20,000</td>
+          </tr>
+          <tr>
+            <td class="item">후유장애진단서</td>
+            <td class="price">100,000</td>
+          </tr>
+          <tr>
+            <td class="item">향후치료비 추정서 (천만원 이하)</td>
+            <td class="price">50,000</td>
+          </tr>
+          <tr>
+            <td class="item">향후치료비 추정서 (천만원 이상)</td>
+            <td class="price">100,000</td>
           </tr>
           <tr>
             <td class="item">근로능력 평가용 진단서</td>
@@ -895,7 +917,25 @@
 
   window.addEventListener('load', initGallery);
 
-  // ── BLOG: posts.json 동적 로딩 ──
+  // ── BLOG: 데이터 직접 내장 (GitHub Pages CORS 우회) ──
+  // 새 글 추가할 때 이 배열에 항목 추가하면 됩니다
+  const POSTS = [
+    {
+      title: "손목·엄지 통증의 원인, 드퀘르벵병이란?",
+      date: "2020-08-11",
+      category: "의학정보",
+      excerpt: "엄지손가락 쪽 손목 통증의 원인인 드퀘르벵병의 증상, 진단, 치료법을 알아봅니다.",
+      file: "posts/post-002.html"
+    },
+    {
+      title: "허리 디스크와 협착증, 어떻게 다를까요?",
+      date: "2025-01-15",
+      category: "의학정보",
+      excerpt: "두 질환의 차이점과 각각에 맞는 치료 방법을 설명합니다.",
+      file: "posts/post-001.html"
+    }
+  ];
+
   const catColors = {
     '의학정보': 'linear-gradient(135deg,#1a2744,#2d5a7d)',
     '공지':    'linear-gradient(135deg,#1e3a2f,#2d7d5a)',
@@ -906,52 +946,35 @@
     '공지':    '<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>',
     '재활정보': '<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>'
   };
+
   function formatDate(d) {
     const [y,m,day] = d.split('-');
     return y + '. ' + m + '. ' + day;
   }
-  fetch('posts.json')
-    .then(r => r.json())
-    .then(posts => {
-      const grid = document.getElementById('blog-grid');
-      const recent = posts.filter(p => p.published !== false).slice(0, 3);
-      if (recent.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-size:.85rem">아직 등록된 글이 없습니다.</div>';
-        return;
-      }
-      grid.innerHTML = recent.map(p => {
-        const color = catColors[p.category] || catColors['의학정보'];
-        const icon  = catIcons[p.category]  || catIcons['의학정보'];
-        return \`<a href="\${p.file}" class="blog-card reveal">
-          <div class="blog-card-img" style="background:\${color}">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".8">\${icon}</svg>
-            <span class="blog-tag">\${p.category}</span>
-          </div>
-          <div class="blog-card-body">
-            <p class="blog-card-date">\${formatDate(p.date)}</p>
-            <h3>\${p.title}</h3>
-            <p>\${p.excerpt || ''}</p>
-          </div>
-        </a>\`;
-      }).join('');
-      // re-observe new cards
-      grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    })
-    .catch(() => {
-      // fallback: posts.json 없을때 기본 카드 표시
-      document.getElementById('blog-grid').innerHTML = \`
-        <a href="posts/post-001.html" class="blog-card reveal">
-          <div class="blog-card-img" style="background:linear-gradient(135deg,#1a2744,#2d5a7d)">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".8"><path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span class="blog-tag">의학정보</span>
-          </div>
-          <div class="blog-card-body">
-            <p class="blog-card-date">2025. 01. 15</p>
-            <h3>허리 디스크와 협착증, 어떻게 다를까요?</h3>
-            <p>두 질환의 차이점과 각각에 맞는 치료 방법을 설명합니다.</p>
-          </div>
-        </a>\`;
-    });
+
+  (function renderBlog() {
+    const grid = document.getElementById('blog-grid');
+    const recent = POSTS.slice(0, 3);
+    if (recent.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-size:.85rem">아직 등록된 글이 없습니다.</div>';
+      return;
+    }
+    grid.innerHTML = recent.map(p => {
+      const color = catColors[p.category] || catColors['의학정보'];
+      const icon  = catIcons[p.category]  || catIcons['의학정보'];
+      return '<a href="' + p.file + '" class="blog-card reveal">'
+        + '<div class="blog-card-img" style="background:' + color + '">'
+        + '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".8">' + icon + '</svg>'
+        + '<span class="blog-tag">' + p.category + '</span>'
+        + '</div>'
+        + '<div class="blog-card-body">'
+        + '<p class="blog-card-date">' + formatDate(p.date) + '</p>'
+        + '<h3>' + p.title + '</h3>'
+        + '<p>' + (p.excerpt || '') + '</p>'
+        + '</div></a>';
+    }).join('');
+    grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  })();
 </script>
 </body>
 </html>
