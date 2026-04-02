@@ -70,7 +70,7 @@
     .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
     .btn-primary{background:var(--teal);color:white;text-decoration:none;padding:14px 28px;border-radius:2px;font-size:.84rem;letter-spacing:.06em;transition:background .2s,transform .2s;display:inline-block}
     .btn-primary:hover{background:var(--teal-light);transform:translateY(-2px)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);text-decoration:none;padding:14px 28px;border-radius:2px;font-size:.84rem;letter-spacing:.06em;transition:border-color .2s,color .2s;display:inline-block}
+    .btn-ghost{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);text-decoration:none;padding:14px 28px;border-radius:2px;font-size:.84rem;letter-spacing:.06em;transition:border-color .2s,color .2s;display:inline-flex;align-items:center;background:none;cursor:pointer;font-family:inherit}
     .btn-ghost:hover{border-color:white;color:white}
     .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:32px;backdrop-filter:blur(8px)}
     .hero-card h3{font-family:'Noto Serif KR',serif;font-size:.8rem;color:var(--accent);letter-spacing:.12em;margin-bottom:22px;display:flex;align-items:center;gap:10px}
@@ -174,6 +174,12 @@
     .info-block h4::after{content:'';flex:1;height:1px;background:var(--border)}
     .info-block p{font-size:.86rem;color:var(--text);line-height:1.85}
     .info-block a{color:var(--teal);text-decoration:none}
+    .map-btn-group{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .map-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:3px;font-size:.78rem;font-weight:500;text-decoration:none;transition:opacity .2s;letter-spacing:.02em}
+    .map-btn:hover{opacity:.85}
+    .kakao-btn{background:#FEE500;color:#3A1D1D}
+    .naver-btn-map{background:#03C75A;color:white}
+    .tmap-btn{background:#E8173C;color:white}
     .naver-btn{display:inline-flex;align-items:center;gap:8px;background:#03c75a;color:white;text-decoration:none;padding:12px 20px;border-radius:3px;font-size:.82rem;font-weight:500;transition:opacity .2s;margin-top:4px}
     .naver-btn:hover{opacity:.85}
 
@@ -324,7 +330,22 @@
       <p class="hero-sub">더탑재활의학과의원은 근골격계 통증과<br>재활 치료를 전문으로 하는 의원입니다.<br>정확한 진단, 체계적인 치료를 약속드립니다.</p>
       <div class="hero-btns">
         <a href="https://m.booking.naver.com/booking/13/bizes/346588" target="_blank" class="btn-primary">네이버 예약</a>
-        <a href="#services" class="btn-ghost">진료과목 보기</a>
+        <button onclick="handleCall()" class="btn-ghost btn-call" id="call-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.67 19.79 19.79 0 01.18 4.1 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span id="call-btn-text">02-6952-3355</span>
+        </button>
+        <!-- 복사 완료 토스트 -->
+        <div id="copy-toast" style="
+          position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);
+          background:rgba(26,39,68,.95);color:white;
+          padding:12px 24px;border-radius:4px;font-size:.84rem;
+          opacity:0;transition:opacity .3s,transform .3s;
+          pointer-events:none;z-index:9999;white-space:nowrap;
+          display:flex;align-items:center;gap:8px;
+        ">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          전화번호가 복사되었습니다
+        </div>
       </div>
     </div>
     <div class="hero-card">
@@ -607,8 +628,20 @@
         <div class="info-block">
           <h4>주소</h4>
           <p>서울특별시 강남구 논현로 98<br>문화빌딩 3층<br>
-          <a href="https://map.kakao.com/link/search/더탑재활의학과의원" target="_blank" style="margin-right:12px">카카오맵 →</a>
-          <a href="https://map.naver.com/v5/search/%EB%8D%94%ED%83%91%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC%EC%9D%98%EC%9B%90" target="_blank">네이버 지도 →</a></p>
+          <div class="map-btn-group">
+            <a href="https://map.kakao.com/link/map/1830721141" target="_blank" class="map-btn kakao-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+              카카오맵
+            </a>
+            <a href="https://map.naver.com/v5/entry/place/1099011927" target="_blank" class="map-btn naver-btn-map">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버지도
+            </a>
+            <a href="tmap://route?goalname=더탑재활의학과의원&goalx=127.0447409&goaly=37.4784354" class="map-btn tmap-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              티맵
+            </a>
+          </div></p>
         </div>
         <div class="info-block">
           <h4>전화 / 팩스</h4>
@@ -995,6 +1028,60 @@
     }).join('');
     grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   });
+
+  // ── 전화하기 버튼: 모바일=전화연결, PC=번호복사 ──
+  function handleCall() {
+    var phone = '02-6952-3355';
+    var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = 'tel:' + phone;
+    } else {
+      // PC: 클립보드 복사
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(phone).then(function() {
+          showCopyToast();
+        }).catch(function() {
+          fallbackCopy(phone);
+        });
+      } else {
+        fallbackCopy(phone);
+      }
+    }
+  }
+
+  function fallbackCopy(text) {
+    var el = document.createElement('textarea');
+    el.value = text;
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.select();
+    try { document.execCommand('copy'); showCopyToast(); } catch(e) {}
+    document.body.removeChild(el);
+  }
+
+  function showCopyToast() {
+    var toast = document.getElementById('copy-toast');
+    var btnText = document.getElementById('call-btn-text');
+    if (!toast) return;
+
+    // 토스트 표시
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+
+    // 버튼 텍스트 잠깐 변경
+    if (btnText) {
+      btnText.textContent = '복사 완료!';
+      setTimeout(function() { btnText.textContent = '02-6952-3355'; }, 2000);
+    }
+
+    // 2.5초 후 사라짐
+    setTimeout(function() {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 2500);
+  }
 </script>
 </body>
 </html>
