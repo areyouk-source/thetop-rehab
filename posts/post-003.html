@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2025년 4월 진료 일정 안내 | 더탑재활의학과의원</title>
+  <meta name="description" content="더탑재활의학과의원 2025년 4월 진료 일정 안내입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1a2744;--teal:#2d7d7d;--teal-light:#3a9999;--cream:#f8f6f2;--text:#1e2a3a;--text-mid:#4a5568;--text-light:#8a9ab0;--border:#e2e8f0;--accent:#c9a96e;--red:#e05555;--green:#2d7d5a}
+    body{font-family:'Noto Sans KR',sans-serif;background:#fdfcfa;color:var(--text);font-weight:300;line-height:1.7}
+
+    nav{position:sticky;top:0;background:rgba(253,252,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100}
+    .nav-inner{max-width:800px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{text-decoration:none;font-family:'Noto Serif KR',serif;font-size:.95rem;color:var(--navy);font-weight:500}
+    .nav-back{text-decoration:none;font-size:.8rem;color:var(--teal);display:flex;align-items:center;gap:6px;transition:gap .2s}
+    .nav-back:hover{gap:10px}
+
+    .post-wrap{max-width:720px;margin:0 auto;padding:52px 24px 100px}
+
+    /* 헤더 */
+    .post-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+    .post-cat{background:var(--teal);color:white;font-size:.65rem;padding:3px 10px;border-radius:2px;letter-spacing:.08em}
+    .post-date{font-size:.78rem;color:var(--text-light)}
+    .post-title{font-family:'Noto Serif KR',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:500;color:var(--navy);line-height:1.45;margin-bottom:8px}
+    .post-subtitle{font-size:.88rem;color:var(--text-mid);margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+
+    /* 상태 배너 */
+    .status-banner{display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:4px;margin-bottom:36px}
+    .status-banner.normal{background:#f0faf5;border:1px solid #a8ddc2}
+    .status-banner.warning{background:#fff8f0;border:1px solid #f0c08a}
+    .status-icon{width:40px;height:40px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .status-banner.normal .status-icon{background:#d0f0e0}
+    .status-banner.warning .status-icon{background:#fde8c8}
+    .status-banner p{font-size:.88rem;color:var(--text-mid);line-height:1.75}
+    .status-banner strong{color:var(--navy);font-weight:500}
+
+    /* 달력 */
+    .cal-wrap{margin-bottom:40px}
+    .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .cal-title{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:500;color:var(--navy)}
+    .cal-legend{display:flex;gap:14px;flex-wrap:wrap}
+    .legend-item{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--text-mid)}
+    .legend-dot{width:10px;height:10px;border-radius:50%}
+    .legend-dot.normal{background:#2d7d7d}
+    .legend-dot.closed{background:#e05555}
+    .legend-dot.half{background:#c9a96e}
+
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+    .cal-day-header{text-align:center;font-size:.72rem;color:var(--text-light);padding:8px 0;letter-spacing:.04em}
+    .cal-day-header.sun{color:#e05555}
+    .cal-day-header.sat{color:#4a7ab0}
+
+    .cal-day{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:4px;font-size:.82rem;position:relative;gap:2px}
+    .cal-day.empty{background:transparent}
+    .cal-day.open{background:white;border:1px solid var(--border);color:var(--text)}
+    .cal-day.closed{background:#fdf0f0;border:1px solid #f5cece;color:#e05555}
+    .cal-day.half{background:#fffbf0;border:1px solid #f0dba0;color:#a07820}
+    .cal-day.sunday{background:#fafafa;border:1px solid var(--border);color:#ccc}
+    .cal-day.today-mark{box-shadow:0 0 0 2px var(--teal)}
+    .cal-day .day-num{font-weight:400;line-height:1}
+    .cal-day .day-label{font-size:.58rem;letter-spacing:.02em;line-height:1}
+    .cal-day.open .day-label{color:var(--teal)}
+    .cal-day.closed .day-label{color:#e05555}
+    .cal-day.half .day-label{color:#a07820}
+    .cal-day.saturday .day-num{color:#4a7ab0}
+    .cal-day.sunday .day-num{color:#ddd}
+
+    /* 정규 진료시간 */
+    .hours-table{width:100%;border-collapse:collapse;margin-bottom:32px;font-size:.86rem}
+    .hours-table th{background:var(--navy);color:white;padding:10px 16px;text-align:left;font-weight:400;font-size:.78rem;letter-spacing:.06em}
+    .hours-table td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-mid);vertical-align:middle}
+    .hours-table tr:last-child td{border-bottom:none}
+    .hours-table tr:hover td{background:var(--cream)}
+    .hours-table .badge{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
+    .badge-open{background:#e8f5ee;color:#2d7d5a}
+    .badge-closed{background:#fde8e8;color:#c03030}
+    .badge-special{background:#fff3d0;color:#a07820}
+
+    /* 공지 메모 */
+    .notice-memo{background:var(--cream);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 3px 3px 0;margin-bottom:32px;font-size:.85rem;color:var(--text-mid);line-height:1.85}
+    .notice-memo p+p{margin-top:6px}
+
+    /* CTA */
+    .cta-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--navy);border-radius:3px;padding:20px 24px;flex-wrap:wrap}
+    .cta-bar p{font-size:.84rem;color:rgba(255,255,255,.65)}
+    .cta-bar strong{display:block;font-size:.95rem;color:white;margin-bottom:2px}
+    .cta-btn{background:var(--teal);color:white;text-decoration:none;padding:10px 20px;border-radius:2px;font-size:.82rem;white-space:nowrap;transition:background .2s}
+    .cta-btn:hover{background:var(--teal-light)}
+
+    .back-btn{display:inline-flex;align-items:center;gap:8px;margin-top:44px;padding:12px 24px;border:1px solid var(--border);border-radius:2px;text-decoration:none;color:var(--text-mid);font-size:.84rem;transition:border-color .2s,color .2s}
+    .back-btn:hover{border-color:var(--teal);color:var(--teal)}
+
+    @media(max-width:480px){
+      .cal-day{font-size:.75rem}
+      .cal-day .day-label{font-size:.52rem}
+      .cta-bar{flex-direction:column;align-items:flex-start}
+      .cal-header{flex-direction:column;align-items:flex-start;gap:10px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">더탑재활의학과의원</a>
+    <a href="../blog.html" class="nav-back">← 목록으로</a>
+  </div>
+</nav>
+
+<div class="post-wrap">
+
+  <div class="post-meta">
+    <span class="post-cat">공지</span>
+    <span class="post-date">2025. 04. 06</span>
+  </div>
+  <h1 class="post-title">2025년 4월 진료 일정 안내</h1>
+  <p class="post-subtitle">4월 한 달간 정상 진료합니다. 내원 전 확인해 주세요.</p>
+
+  <!-- 상태 배너 -->
+  <div class="status-banner normal">
+    <div class="status-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d7d5a" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <p><strong>4월 휴진 없음 — 정상 진료</strong><br>
+    공휴일 포함 별도 휴진 일정 없이 평소와 동일하게 운영됩니다.</p>
+  </div>
+
+  <!-- 달력 -->
+  <div class="cal-wrap">
+    <div class="cal-header">
+      <span class="cal-title">2025년 4월</span>
+      <div class="cal-legend">
+        <div class="legend-item"><div class="legend-dot normal"></div>정상 진료</div>
+        <div class="legend-item"><div class="legend-dot closed"></div>휴진</div>
+        <div class="legend-item"><div class="legend-dot half"></div>단축 진료</div>
+      </div>
+    </div>
+    <div class="cal-grid">
+      <!-- 요일 헤더 -->
+      <div class="cal-day-header sun">일</div>
+      <div class="cal-day-header">월</div>
+      <div class="cal-day-header">화</div>
+      <div class="cal-day-header">수</div>
+      <div class="cal-day-header">목</div>
+      <div class="cal-day-header">금</div>
+      <div class="cal-day-header sat">토</div>
+
+      <!-- 1주: 4/1(화)부터 시작 — 앞 빈칸 2개 -->
+      <div class="cal-day sunday"><span class="day-num" style="color:#ddd">30</span></div>
+      <div class="cal-day open"><span class="day-num">31</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">1</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">2</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">3</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">4</span><span class="day-label">진료</span></div>
+      <div class="cal-day open saturday"><span class="day-num">5</span><span class="day-label">오전</span></div>
+
+      <!-- 2주 -->
+      <div class="cal-day sunday"><span class="day-num">6</span></div>
+      <div class="cal-day open"><span class="day-num">7</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">8</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">9</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">10</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">11</span><span class="day-label">진료</span></div>
+      <div class="cal-day open saturday"><span class="day-num">12</span><span class="day-label">오전</span></div>
+
+      <!-- 3주 -->
+      <div class="cal-day sunday"><span class="day-num">13</span></div>
+      <div class="cal-day open"><span class="day-num">14</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">15</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">16</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">17</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">18</span><span class="day-label">진료</span></div>
+      <div class="cal-day open saturday"><span class="day-num">19</span><span class="day-label">오전</span></div>
+
+      <!-- 4주 -->
+      <div class="cal-day sunday"><span class="day-num">20</span></div>
+      <div class="cal-day open"><span class="day-num">21</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">22</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">23</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">24</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">25</span><span class="day-label">진료</span></div>
+      <div class="cal-day open saturday"><span class="day-num">26</span><span class="day-label">오전</span></div>
+
+      <!-- 5주 -->
+      <div class="cal-day sunday"><span class="day-num">27</span></div>
+      <div class="cal-day open"><span class="day-num">28</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">29</span><span class="day-label">진료</span></div>
+      <div class="cal-day open"><span class="day-num">30</span><span class="day-label">진료</span></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+    </div>
+  </div>
+
+  <!-- 정규 진료시간 -->
+  <table class="hours-table">
+    <thead><tr><th>요일</th><th>진료시간</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>월 · 화 · 목 · 금</td>
+        <td>09:00 – 19:00</td>
+        <td><span class="badge badge-open">정상</span></td>
+      </tr>
+      <tr>
+        <td>수요일</td>
+        <td>14:00 – 19:00</td>
+        <td><span class="badge badge-special">오전 휴진</span></td>
+      </tr>
+      <tr>
+        <td>토요일</td>
+        <td>09:00 – 13:00</td>
+        <td><span class="badge badge-special">오전 진료</span></td>
+      </tr>
+      <tr>
+        <td>일요일 · 공휴일</td>
+        <td>—</td>
+        <td><span class="badge badge-closed">휴진</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 메모 -->
+  <div class="notice-memo">
+    <p>· 점심시간 13:00 – 14:00 (수요일 제외)</p>
+    <p>· 예약 없이 내원 가능하나, 대기 시간 단축을 위해 네이버 예약을 권장합니다.</p>
+    <p>· 진료 일정은 원내 사정에 따라 변경될 수 있으며, 변경 시 홈페이지 및 네이버 플레이스를 통해 안내드립니다.</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-bar">
+    <div>
+      <strong>더탑재활의학과의원</strong>
+      <p>서울 강남구 논현로 98, 문화빌딩 3층 &nbsp;|&nbsp; 02-6952-3355</p>
+    </div>
+    <a href="https://m.booking.naver.com/booking/13/bizes/346588" target="_blank" class="cta-btn">네이버 예약</a>
+  </div>
+
+</div>
+
+<a href="../blog.html" class="back-btn" style="max-width:720px;margin:0 auto 60px;display:inline-flex;margin-left:24px">← 목록으로 돌아가기</a>
+
+</body>
+</html>
