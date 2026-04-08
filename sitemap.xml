@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 블로그 목록 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/blog.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 개인정보취급방침 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/privacy.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- 환자권리장전 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/rights.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- 블로그 글: 2026년 4월 진료 일정 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/posts/post-003.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 블로그 글: 드퀘르벵병 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/posts/post-002.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 블로그 글: 허리 디스크와 협착증 -->
+  <url>
+    <loc>https://www.thetop-rehab.co.kr/posts/post-001.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
