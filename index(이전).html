@@ -82,17 +82,18 @@
     body{font-family:'Noto Sans KR',sans-serif;background:var(--warm-white);color:var(--text);font-weight:300;line-height:1.7}
 
     /* POPUP */
-    #popup-overlay{position:fixed;inset:0;background:rgba(10,18,40,.75);backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease}
+    #popup-overlay{position:fixed;inset:0;background:rgba(26,39,68,.6);backdrop-filter:blur(4px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease}
     #popup-overlay.hidden{display:none}
-    .popup-box{background:transparent;max-width:380px;width:100%;overflow:hidden}
-    .popup-img-wrap{border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);cursor:pointer;display:block;text-decoration:none}
-    .popup-img-wrap img{width:100%;display:block;border-radius:12px}
-    .popup-img-wrap svg{width:100%;display:block;border-radius:12px}
-    .popup-footer{display:flex;justify-content:space-between;align-items:center;padding:14px 4px 0}
-    .popup-footer label{font-size:.8rem;color:rgba(255,255,255,.55);cursor:pointer;display:flex;align-items:center;gap:6px}
-    .popup-footer label input{accent-color:var(--teal)}
-    .popup-footer button{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;padding:7px 18px;border-radius:3px;font-size:.8rem;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
-    .popup-footer button:hover{background:rgba(255,255,255,.25)}
+    .popup-box{background:white;border-radius:4px;max-width:480px;width:100%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+    .popup-header{background:var(--navy);color:white;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .popup-header h3{font-family:'Noto Serif KR',serif;font-weight:500;font-size:1rem}
+    .popup-badge{background:var(--accent);color:white;font-size:.65rem;padding:3px 8px;border-radius:2px;letter-spacing:.05em}
+    .popup-body{padding:28px 24px}
+    .popup-body h4{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:500;color:var(--navy);margin-bottom:12px}
+    .popup-body p{font-size:.88rem;color:var(--text-mid);line-height:1.8}
+    .popup-footer{padding:16px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+    .popup-footer label{font-size:.8rem;color:var(--text-light);cursor:pointer;display:flex;align-items:center;gap:6px}
+    .popup-footer button{background:var(--navy);color:white;border:none;padding:8px 20px;border-radius:2px;font-size:.82rem;cursor:pointer;font-family:'Noto Sans KR',sans-serif}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
@@ -329,13 +330,20 @@
 <!-- POPUP -->
 <div id="popup-overlay">
   <div class="popup-box">
-    <!-- 이미지 클릭 시 블로그 글로 이동 -->
-    <a href="posts/post-004.html" class="popup-img-wrap">
-      <img src="images/schedule-2026-05.svg" alt="2026년 5월 진료 일정 안내">
-    </a>
+    <div class="popup-header">
+      <h3>더탑재활의학과의원</h3>
+      <span class="popup-badge">진료 안내</span>
+    </div>
+    <div class="popup-body">
+      <h4>수요일 오전 진료 휴진 안내</h4>
+      <p>안녕하세요, 더탑재활의학과의원입니다.<br><br>
+      <strong>수요일</strong>은 오전 진료 없이 <strong>오후 2시부터</strong> 진료를 시작합니다.<br>
+      점심시간(13:00–14:00)은 수요일을 제외한 전 요일 동일하게 적용됩니다.<br><br>
+      문의: <strong>02-6952-3355</strong></p>
+    </div>
     <div class="popup-footer">
       <label><input type="checkbox" id="popup-no-show"> 오늘 하루 보지 않기</label>
-      <button onclick="closePopup()">닫기</button>
+      <button onclick="closePopup()">확인</button>
     </div>
   </div>
 </div>
@@ -1045,13 +1053,6 @@
       category: "의학정보",
       excerpt: "두 질환의 차이점과 각각에 맞는 치료 방법을 설명합니다.",
       file: "posts/post-001.html"
-    },
-    {
-      title: "2026년 5월 진료 일정 안내",
-      date: "2026-04-23",
-      category: "공지",
-      excerpt: "5/1 근로자의날·5/5 어린이날 휴진, 5/25 석가탄신일 오전 단축진료 안내입니다.",
-      file: "posts/post-004.html"
     }
   ];
 

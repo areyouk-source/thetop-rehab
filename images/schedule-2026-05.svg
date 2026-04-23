@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" font-family="'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2744"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d7d7d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3a9999;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a96e"/>
+      <stop offset="100%" style="stop-color:#dfc08a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="600" height="800" fill="url(#bgGrad)"/>
+
+  <!-- 배경 장식 원 -->
+  <circle cx="520" cy="100" r="180" fill="rgba(45,125,125,.08)"/>
+  <circle cx="80" cy="680" r="140" fill="rgba(201,169,110,.06)"/>
+  <circle cx="520" cy="100" r="100" fill="rgba(45,125,125,.06)"/>
+
+  <!-- 상단 로고 영역 -->
+  <rect x="0" y="0" width="600" height="4" fill="url(#cardGrad)"/>
+
+  <!-- 병원명 -->
+  <text x="300" y="58" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.5)" letter-spacing="4">THE TOP REHABILITATION CLINIC</text>
+  <text x="300" y="88" text-anchor="middle" font-size="20" font-weight="500" fill="white" letter-spacing="2">더탑재활의학과의원</text>
+
+  <!-- 구분선 -->
+  <line x1="240" y1="104" x2="360" y2="104" stroke="url(#accentGrad)" stroke-width="1"/>
+
+  <!-- 메인 타이틀 -->
+  <text x="300" y="148" text-anchor="middle" font-size="13" fill="#c9a96e" letter-spacing="6">2 0 2 6 년</text>
+  <text x="300" y="198" text-anchor="middle" font-size="52" font-weight="700" fill="white" letter-spacing="-1">5월</text>
+  <text x="300" y="234" text-anchor="middle" font-size="18" fill="rgba(255,255,255,.7)" letter-spacing="4">진료 일정 안내</text>
+
+  <!-- 달력 영역 -->
+  <rect x="32" y="260" width="536" height="320" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+
+  <!-- 달력 헤더 -->
+  <rect x="32" y="260" width="536" height="44" rx="12" fill="rgba(45,125,125,.4)"/>
+  <rect x="32" y="292" width="536" height="12" fill="rgba(45,125,125,.4)"/>
+
+  <!-- 요일 헤더 -->
+  <text x="68"  y="290" text-anchor="middle" font-size="12" fill="#ff9090" font-weight="500">일</text>
+  <text x="144" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">월</text>
+  <text x="220" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">화</text>
+  <text x="296" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">수</text>
+  <text x="372" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">목</text>
+  <text x="448" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">금</text>
+  <text x="524" y="290" text-anchor="middle" font-size="12" fill="#90b4ff" font-weight="500">토</text>
+
+  <!-- 달력 날짜 : 5/1 = 금요일 -->
+  <!-- 1주: 빈칸5개 + 1(금),2(토) -->
+  <!-- 날짜 y좌표: 1주=338, 2주=395, 3주=452, 4주=509, 5주=554 -->
+
+  <!-- 1주 -->
+  <!-- 1일 금요일 - 근로자의날 휴무 -->
+  <circle cx="448" cy="333" r="18" fill="#e05555" opacity=".9"/>
+  <text x="448" y="330" text-anchor="middle" font-size="14" fill="white" font-weight="600">1</text>
+  <text x="448" y="343" text-anchor="middle" font-size="7.5" fill="white">휴무</text>
+  <!-- 2일 토요일 -->
+  <text x="524" y="337" text-anchor="middle" font-size="14" fill="#90b4ff">2</text>
+  <text x="524" y="350" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 2주 -->
+  <!-- 3일 일요일 -->
+  <text x="68"  y="394" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">3</text>
+  <!-- 4월 월요일 -->
+  <text x="144" y="394" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">4</text>
+  <text x="144" y="407" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <!-- 5일 화요일 어린이날 휴무 -->
+  <circle cx="220" cy="389" r="18" fill="#e05555" opacity=".9"/>
+  <text x="220" y="386" text-anchor="middle" font-size="14" fill="white" font-weight="600">5</text>
+  <text x="220" y="399" text-anchor="middle" font-size="7.5" fill="white">휴무</text>
+  <!-- 6일 수요일 -->
+  <text x="296" y="394" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">6</text>
+  <text x="296" y="407" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <!-- 7일 목요일 -->
+  <text x="372" y="394" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">7</text>
+  <text x="372" y="407" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <!-- 8일 금요일 -->
+  <text x="448" y="394" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">8</text>
+  <text x="448" y="407" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <!-- 9일 토요일 -->
+  <text x="524" y="394" text-anchor="middle" font-size="14" fill="#90b4ff">9</text>
+  <text x="524" y="407" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 3주 -->
+  <text x="68"  y="451" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">10</text>
+  <text x="144" y="451" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">11</text>
+  <text x="144" y="464" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="451" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">12</text>
+  <text x="220" y="464" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="451" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">13</text>
+  <text x="296" y="464" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="451" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">14</text>
+  <text x="372" y="464" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="451" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">15</text>
+  <text x="448" y="464" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="451" text-anchor="middle" font-size="14" fill="#90b4ff">16</text>
+  <text x="524" y="464" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 4주 -->
+  <text x="68"  y="508" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">17</text>
+  <text x="144" y="508" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">18</text>
+  <text x="144" y="521" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="508" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">19</text>
+  <text x="220" y="521" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="508" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">20</text>
+  <text x="296" y="521" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="508" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">21</text>
+  <text x="372" y="521" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="508" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">22</text>
+  <text x="448" y="521" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="508" text-anchor="middle" font-size="14" fill="#90b4ff">23</text>
+  <text x="524" y="521" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 5주 -->
+  <text x="68"  y="558" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">24</text>
+  <!-- 25일 월요일 석가탄신일 단축 -->
+  <rect x="120" y="541" width="48" height="32" rx="6" fill="rgba(201,169,110,.25)" stroke="#c9a96e" stroke-width="1"/>
+  <text x="144" y="555" text-anchor="middle" font-size="14" fill="#dfc08a" font-weight="600">25</text>
+  <text x="144" y="568" text-anchor="middle" font-size="7.5" fill="#c9a96e">오전만</text>
+  <text x="220" y="558" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">26</text>
+  <text x="220" y="571" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="558" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">27</text>
+  <text x="296" y="571" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="558" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">28</text>
+  <text x="372" y="571" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="558" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">29</text>
+  <text x="448" y="571" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="558" text-anchor="middle" font-size="14" fill="#90b4ff">30</text>
+  <text x="524" y="571" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 31일 -->
+  <text x="68" y="608" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">31</text>
+
+  <!-- 범례 -->
+  <circle cx="52" cy="622" r="7" fill="#e05555"/>
+  <text x="64" y="627" font-size="11" fill="rgba(255,255,255,.7)">휴무</text>
+  <rect x="110" y="615" width="14" height="14" rx="3" fill="rgba(201,169,110,.25)" stroke="#c9a96e" stroke-width="1"/>
+  <text x="130" y="627" font-size="11" fill="rgba(255,255,255,.7)">단축진료</text>
+  <circle cx="214" cy="622" r="7" fill="rgba(45,200,160,.3)" stroke="rgba(45,200,160,.6)" stroke-width="1"/>
+  <text x="226" y="627" font-size="11" fill="rgba(255,255,255,.7)">정상진료</text>
+
+  <!-- 휴무 상세 안내 카드 -->
+  <rect x="32" y="648" width="536" height="108" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+
+  <!-- 5/1 근로자의날 -->
+  <rect x="48" y="662" width="3" height="36" rx="2" fill="#e05555"/>
+  <text x="62" y="678" font-size="13" font-weight="600" fill="white">5월 1일 (금) · 근로자의 날</text>
+  <text x="62" y="694" font-size="11.5" fill="rgba(255,255,255,.55)">법정 공휴일 휴진</text>
+
+  <!-- 5/5 어린이날 -->
+  <rect x="48" y="704" width="3" height="36" rx="2" fill="#e05555"/>
+  <text x="62" y="720" font-size="13" font-weight="600" fill="white">5월 5일 (화) · 어린이날</text>
+  <text x="62" y="736" font-size="11.5" fill="rgba(255,255,255,.55)">법정 공휴일 휴진</text>
+
+  <!-- 5/25 석가탄신일 -->
+  <rect x="316" y="662" width="3" height="52" rx="2" fill="#c9a96e"/>
+  <text x="330" y="678" font-size="13" font-weight="600" fill="#dfc08a">5월 25일 (월) · 석가탄신일</text>
+  <text x="330" y="694" font-size="11.5" fill="rgba(201,169,110,.75)">오전 진료만 운영</text>
+  <text x="330" y="710" font-size="11.5" fill="rgba(201,169,110,.75)">09:00 – 13:00</text>
+
+  <!-- 하단 진료시간 -->
+  <rect x="0" y="770" width="600" height="30" fill="rgba(45,125,125,.3)"/>
+  <text x="300" y="790" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.6)" letter-spacing="1">평일 09–19 &nbsp;·&nbsp; 수 14–19 &nbsp;·&nbsp; 토 09–13 &nbsp;·&nbsp; 점심 13–14</text>
+
+  <!-- 하단 전화번호 -->
+  <text x="300" y="756" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.45)" letter-spacing="2">📞 02-6952-3355</text>
+</svg>
