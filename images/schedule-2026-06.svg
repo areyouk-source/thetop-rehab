@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" font-family="'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2744"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d7d7d"/>
+      <stop offset="100%" style="stop-color:#3a9999"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a96e"/>
+      <stop offset="100%" style="stop-color:#dfc08a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="600" height="800" fill="url(#bgGrad)"/>
+  <circle cx="520" cy="100" r="180" fill="rgba(45,125,125,.08)"/>
+  <circle cx="80" cy="680" r="140" fill="rgba(201,169,110,.06)"/>
+  <circle cx="520" cy="100" r="100" fill="rgba(45,125,125,.06)"/>
+
+  <!-- 상단 라인 -->
+  <rect x="0" y="0" width="600" height="4" fill="url(#cardGrad)"/>
+
+  <!-- 병원명 -->
+  <text x="300" y="58" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.5)" letter-spacing="4">THE TOP REHABILITATION CLINIC</text>
+  <text x="300" y="88" text-anchor="middle" font-size="20" font-weight="500" fill="white" letter-spacing="2">더탑재활의학과의원</text>
+  <line x1="240" y1="104" x2="360" y2="104" stroke="url(#accentGrad)" stroke-width="1"/>
+
+  <!-- 메인 타이틀 -->
+  <text x="300" y="148" text-anchor="middle" font-size="13" fill="#c9a96e" letter-spacing="6">2 0 2 6 년</text>
+  <text x="300" y="198" text-anchor="middle" font-size="52" font-weight="700" fill="white" letter-spacing="-1">6월</text>
+  <text x="300" y="234" text-anchor="middle" font-size="18" fill="rgba(255,255,255,.7)" letter-spacing="4">진료 일정 안내</text>
+
+  <!-- 달력 영역 -->
+  <rect x="32" y="260" width="536" height="330" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <rect x="32" y="260" width="536" height="44" rx="12" fill="rgba(45,125,125,.4)"/>
+  <rect x="32" y="292" width="536" height="12" fill="rgba(45,125,125,.4)"/>
+
+  <!-- 요일 헤더 -->
+  <text x="68"  y="290" text-anchor="middle" font-size="12" fill="#ff9090" font-weight="500">일</text>
+  <text x="144" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">월</text>
+  <text x="220" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">화</text>
+  <text x="296" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">수</text>
+  <text x="372" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">목</text>
+  <text x="448" y="290" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.7)" font-weight="500">금</text>
+  <text x="524" y="290" text-anchor="middle" font-size="12" fill="#90b4ff" font-weight="500">토</text>
+
+  <!-- 6/1 = 월요일 -->
+  <!-- 1주: 빈칸(일) + 1월,2화,3수(선거휴무),4목,5금,6토(현충일휴무) -->
+
+  <!-- 1주 -->
+  <text x="68" y="338" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.3)"></text>
+  <text x="144" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">1</text>
+  <text x="144" y="351" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">2</text>
+  <text x="220" y="351" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.45)">오전진료</text>
+
+  <!-- 3일 수요일 선거 휴무 -->
+  <circle cx="296" cy="333" r="18" fill="#e05555" opacity=".9"/>
+  <text x="296" y="330" text-anchor="middle" font-size="14" fill="white" font-weight="600">3</text>
+  <text x="296" y="343" text-anchor="middle" font-size="7.5" fill="white">휴무</text>
+
+  <text x="372" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">4</text>
+  <text x="372" y="351" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">5</text>
+  <text x="448" y="351" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+
+  <!-- 6일 토요일 현충일 휴무 -->
+  <circle cx="524" cy="333" r="18" fill="#e05555" opacity=".9"/>
+  <text x="524" y="330" text-anchor="middle" font-size="14" fill="white" font-weight="600">6</text>
+  <text x="524" y="343" text-anchor="middle" font-size="7.5" fill="white">휴무</text>
+
+  <!-- 2주 -->
+  <text x="68"  y="395" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">7</text>
+  <text x="144" y="395" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">8</text>
+  <text x="144" y="408" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="395" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">9</text>
+  <text x="220" y="408" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="395" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">10</text>
+  <text x="296" y="408" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="395" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">11</text>
+  <text x="372" y="408" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="395" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">12</text>
+  <text x="448" y="408" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="395" text-anchor="middle" font-size="14" fill="#90b4ff">13</text>
+  <text x="524" y="408" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 3주 -->
+  <text x="68"  y="452" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">14</text>
+  <text x="144" y="452" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">15</text>
+  <text x="144" y="465" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="452" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">16</text>
+  <text x="220" y="465" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="452" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">17</text>
+  <text x="296" y="465" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="452" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">18</text>
+  <text x="372" y="465" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="452" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">19</text>
+  <text x="448" y="465" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="452" text-anchor="middle" font-size="14" fill="#90b4ff">20</text>
+  <text x="524" y="465" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 4주 -->
+  <text x="68"  y="509" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">21</text>
+  <text x="144" y="509" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">22</text>
+  <text x="144" y="522" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="509" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">23</text>
+  <text x="220" y="522" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="296" y="509" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">24</text>
+  <text x="296" y="522" text-anchor="middle" font-size="8" fill="rgba(255,200,80,.8)">오후</text>
+  <text x="372" y="509" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">25</text>
+  <text x="372" y="522" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="448" y="509" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">26</text>
+  <text x="448" y="522" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="524" y="509" text-anchor="middle" font-size="14" fill="#90b4ff">27</text>
+  <text x="524" y="522" text-anchor="middle" font-size="8" fill="rgba(144,180,255,.7)">오전</text>
+
+  <!-- 5주 -->
+  <text x="68"  y="562" text-anchor="middle" font-size="14" fill="rgba(255,144,144,.5)">28</text>
+  <text x="144" y="562" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">29</text>
+  <text x="144" y="575" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+  <text x="220" y="562" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">30</text>
+  <text x="220" y="575" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
+
+  <!-- 범례 -->
+  <circle cx="52" cy="600" r="7" fill="#e05555"/>
+  <text x="64" y="605" font-size="11" fill="rgba(255,255,255,.7)">휴무</text>
+  <circle cx="118" cy="600" r="7" fill="rgba(45,200,160,.3)" stroke="rgba(45,200,160,.6)" stroke-width="1"/>
+  <text x="130" y="605" font-size="11" fill="rgba(255,255,255,.7)">정상진료</text>
+  <circle cx="214" cy="600" r="7" fill="rgba(255,200,80,.3)" stroke="rgba(255,200,80,.6)" stroke-width="1"/>
+  <text x="226" y="605" font-size="11" fill="rgba(255,255,255,.7)">오후진료(수)</text>
+
+  <!-- 휴무 상세 카드 -->
+  <rect x="32" y="622" width="536" height="112" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+
+  <!-- 6/3 선거 -->
+  <rect x="48" y="636" width="3" height="36" rx="2" fill="#e05555"/>
+  <text x="62" y="652" font-size="13" font-weight="600" fill="white">6월 3일 (수) · 전국지방선거</text>
+  <text x="62" y="668" font-size="11.5" fill="rgba(255,255,255,.55)">공직선거법에 따른 선거일 휴진</text>
+
+  <!-- 6/6 현충일 -->
+  <rect x="48" y="678" width="3" height="36" rx="2" fill="#e05555"/>
+  <text x="62" y="694" font-size="13" font-weight="600" fill="white">6월 6일 (토) · 현충일</text>
+  <text x="62" y="710" font-size="11.5" fill="rgba(255,255,255,.55)">법정 공휴일 휴진 (토요일 정기 휴진과 중복)</text>
+
+  <!-- 하단 -->
+  <rect x="0" y="748" width="600" height="52" fill="rgba(0,0,0,.2)"/>
+  <text x="300" y="770" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.6)" letter-spacing="1">평일 09–19 · 수 14–19 · 토 09–13 · 점심 13–14</text>
+  <text x="300" y="790" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.4)" letter-spacing="2">📞 02-6952-3355</text>
+</svg>
