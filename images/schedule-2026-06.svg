@@ -55,7 +55,7 @@
   <text x="144" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">1</text>
   <text x="144" y="351" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
   <text x="220" y="338" text-anchor="middle" font-size="14" fill="rgba(255,255,255,.85)">2</text>
-  <text x="220" y="351" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.45)">오전진료</text>
+  <text x="220" y="351" text-anchor="middle" font-size="8" fill="rgba(45,200,160,.8)">진료</text>
 
   <!-- 3일 수요일 선거 휴무 -->
   <circle cx="296" cy="333" r="18" fill="#e05555" opacity=".9"/>
